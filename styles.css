@@ -1,0 +1,117 @@
+html {
+margin: 2px;
+padding: 2px;
+border: 2px;
+left: 2px;
+top: 2px;
+}
+p, li {
+font: 1em Arial, Helvetica, sans-serif;
+}
+h1 {
+font: 2em Arial, Helvetica, sans-serif;
+}
+h2 {
+font: 1.5em Arial, Helvetica, sans-serif;
+}
+h3 {
+font: 1.25em Arial, Helvetica, sans-serif;
+}
+a:link {
+text-decoration: none;
+font-family: Arial, Helvetica, sans-serif;
+color: #000000;
+}
+a:visited {
+text-decoration: none;
+color: #000000;
+}
+a:hover {
+text-decoration: none;
+background: #adadad;
+font-style: oblique;
+}
+
+label {
+  display: block;
+  margin: 20px 0 0;
+  border-bottom: 1px solid green;
+}
+label:hover {
+  text-decoration: underline;
+}
+input {
+  position: absolute;
+  left: -999em;
+}
+.hide {
+  width: 50%;
+  border: 1px solid #000;
+  background: red;
+  max-height: 99em;
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
+  transition: opacity 1.5s linear, max-height 1.5s linear;
+}
+.hide p {
+  padding: 10px;
+  margin: 0;
+}
+.ex1 input[type="checkbox"]:checked + div {
+  opacity: 0;
+  max-height: 0;
+  border: none;
+}
+.follow {
+  border-top: 1px solid blue;
+  margin: 0;
+}
+
+/* example 2 */
+.inner {
+  position: relative;
+  overflow: hidden;
+}
+.hide2 {
+  width: 50%;
+  float: left;
+  clear: both;
+  border: 1px solid #000;
+  opacity: 1;
+  overflow: hidden;
+  transform: translateY(0);
+  margin: 0;
+  transition: all 1.5s linear, margin 0s linear 0s;
+}
+.hide2 p {
+  padding: 10px;
+  margin: 0;
+}
+.ex2 .follow {
+  clear: both;
+}
+
+.ex2 input[type="checkbox"]:checked + .inner .hide2 {
+  opacity: 0;
+  transform: translateY(-100%);
+  margin-bottom: -999em;
+  transition: all 1.5s linear, margin 0s linear 1.5s;
+}
+
+.ex3 .hide3 {
+  width: 50%;
+  display: table;
+  height: 150px; 
+  overflow: hidden;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.inner3 {
+  padding: 10px;
+}
+.ex3 input[type="checkbox"]:checked + .hide3 {
+  height: 0;
+  opacity: 0;
+  display: block;
+}
